@@ -3,6 +3,14 @@
 
 #include<iomanip>
 
+#include"Person.h"
+
+//#include"PerceptionDevice.h"
+
+
+//using namespace std; 
+
+using std::cin; 
 using std::cout; 
 using std::vector;
 using std::string; 
@@ -12,18 +20,7 @@ using std::left;
 using std::setw;
 //vector<int> nums = { 1, 2, 3, 4, 5 }; 
 
-/*
-The Person struct has three attributes: hasHair, weight, and eyeColor
-*/
-struct Person
-{
-	//"member variables" of a person struct(ure)
-	bool hasHair; 
-	double weight; //lbs or kgs (160 lbs)
-	string eyeColor; 
 
-	int numberOfBodiesInBackyard;
-};
 
 struct RPGCharacter
 {
@@ -37,41 +34,24 @@ struct RPGCharacter
 //
 //};
 
-void printListOfPeople(const vector<Person>& people)
-{
-
-	const int COL_WIDTH = 10; 
-
-	cout << left << setw(10) << "Has Hair: "; 
-	cout << left << setw(10) << "Weight:";
-	cout << left << setw(10) << "Eye color:"; 
-	cout << left << setw(10) << "Num bodies: ";
-	cout << "\n";
-		
-	for (const auto& person : people)
-	{
-		cout << std::boolalpha;
-		cout << left << setw(10) << person.hasHair;
-		cout << left << setw(10) << person.weight;
-		cout << left << setw(10) << person.eyeColor;
-		cout << left << setw(10) << person.numberOfBodiesInBackyard;
-
-		cout << "\n";
-	}
-}
-
 int main()
 {
-	int aNumber = 32; //this variable holds a SINGLE value 
+	//int aNumber = 32; //this variable holds a SINGLE value 
 	
+	Person person; 
+	cout << "Enter the person's member variables (hasHair (a bool), weight (double), eyeColor (string), bodyCount:\n";
+	cin >> person.hasHair >> person.weight >> person.eyeColor >> person.numberOfBodiesInBackyard; 
+
+
 	vector<string> names =
 	{
 		"Alice",
-		"Bob"
+		"Bob",
 		"Carol",
 		"Darth Vader"
 	}; //a data type that can hold MULTIPLE values 
 	
+	//high fallutin'
 
 	//cout << names[0] << "\n";
 	
@@ -79,9 +59,11 @@ int main()
 	Person him = {true, 190.1, "Brown", 2}; //brace initializer syntax
 	//you is an object that holds all of the member variables of a `Person` data type 
 	
+	cout << him.eyeColor << "\n";
+
 	//cout << him.numberOfBodiesInBackyard << "\n";
 
-
+	//vector<int> someNums = { 1, 2, "3" };
 	vector<Person> listOfPeople = { him };
 
 	//cout << std::boolalpha << listOfPeople[0].hasHair << "\n";
@@ -89,7 +71,7 @@ int main()
 	Person me; 
 	me.eyeColor = "Blue"; 
 	me.hasHair = true; //hairists
-	me.numberOfBodiesInBackyard = 5; 
+	me.numberOfBodiesInBackyard = 5; //animals (pets) that I have buried
 	me.weight = 163.5; 
 
 	listOfPeople.push_back(me);
@@ -98,6 +80,9 @@ int main()
 
 	cout << "Printing list of people ...\n";
 	system("pause"); 
+
+	listOfPeople.push_back(person); 
+
 
 	printListOfPeople(listOfPeople);
 

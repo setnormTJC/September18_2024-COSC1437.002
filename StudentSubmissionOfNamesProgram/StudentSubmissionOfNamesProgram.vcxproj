@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{0782045c-0262-4f6e-82fd-2b6c0b57961e}</ProjectGuid>
-    <RootNamespace>September182024COSC1437002</RootNamespace>
+    <ProjectGuid>{113bbbbe-56ca-4086-bb93-646828598389}</ProjectGuid>
+    <RootNamespace>StudentSubmissionOfNamesProgram</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,10 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="September18_2024-COSC1437.002.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Person.h" />
+    <ClCompile Include="StudentSubmissionOfNamesProgram.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
